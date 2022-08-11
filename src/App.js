@@ -1,12 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import About from './components/About';
 import Nav from './components/Nav';
 import Gallery from './components/Gallery';
 import ContactForm from './components/Contact';
+
+// import { useEffect } from "react";
 // import logo from './aaliyah.JPG';
 // import './App.css';
 
-function App() {
+// function App() {
+  function App() {
+    // You can skip useEffect if you're not using TailwindCSS
+    // Otherwise, for the production usage refer to https://tailwindcss.com/docs/installation
+    useEffect(() => {
+      if (document) {
+        const stylesheet = document.createElement("link");
+        stylesheet.rel = "stylesheet";
+        stylesheet.href = "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css";
+  
+        document.head.appendChild(stylesheet);
+      }
+    }, []);
   const [categories] = useState([
     
            

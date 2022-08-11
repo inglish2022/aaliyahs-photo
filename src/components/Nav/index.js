@@ -10,7 +10,8 @@ function Nav(props) {
         setCurrentCategory,
         currentCategory,
         contactSelected,
-        setContactSelected
+        setContactSelected,
+        setCurrantPage
     } = props;
 
     useEffect(() => {
@@ -30,7 +31,7 @@ function Nav(props) {
             <nav>
                 <ul className='flex-row'>
                     <li className='mx-2'>
-                        <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
+                        <a data-testid="about" href="#about" onClick={() => setCurrantPage('About')}>
                             About me
                         </a>
                     </li>
