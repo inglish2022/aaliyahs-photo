@@ -31,7 +31,7 @@ function Nav(props) {
             <nav>
                 <ul className='flex-row'>
                     <li className='mx-2'>
-                        <a data-testid="about" href="#about" onClick={() => setCurrantPage('About')}>
+                        <a data-testid="about" href="/" onClick={() => setCurrantPage('About')}>
                             About me
                         </a>
                     </li>
